@@ -8,8 +8,7 @@ var Logo = React.createClass({
 			topFirst: 'S',
 			topMiddle: 'TRANGE',
 			topLast: 'R',
-			bottom: 'THINGS',
-			topMiddleWidth: 265
+			bottom: 'THINGS'
 		}
 	},
 	handleFormSubmit: function (topFirst, topMiddle, topLast, bottom) {
@@ -25,15 +24,32 @@ var Logo = React.createClass({
 		var topMiddleWidth = $('#topMiddle').width();
 		var bottomWidth = $('#bottomWordLength').width();
 
-		alert(
-			'topWidth = ' + topWidth +
-			'\ntopMiddleWidth = ' + topMiddleWidth +
-			'\nbottomWidth = ' + bottomWidth
-		);
-
 		if (bottomWidth > topMiddleWidth) {
-			alert('uh-oh! the bottom\'s longer than the top');
+			alert('Uh-oh! the bottom word is kinda long... But here\'s what it looks like anyways.');
 		}
+
+		// get X and Y of topFirst letter
+		var topWordPos = $('#topFirst').position();
+		// adjust width because of Comic Sans goofiness
+		var adjWidth = (topWordPos.left + topWidth);
+
+		var rectHeight = 10;
+
+		function makeLines () {					
+			// make top line
+			$('#topLine').html(`
+				<svg width="${adjWidth}" height="${rectHeight}">
+  					<rect x="${topWordPos.left}" y="0" width="${topWidth - 20}" height="${rectHeight}" style="fill:black;stroke-width:3;" />
+				</svg>
+			`);
+
+			// make left line
+
+			// make right line
+			
+		}
+
+		makeLines();
 	},
 	render: function () {
 		// pull states off Logo module

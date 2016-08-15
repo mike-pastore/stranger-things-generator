@@ -31,7 +31,7 @@ var LogoForm = React.createClass({
 	},
 	render: function () {
 		return (
-			<form onSubmit={this.onFormSubmit}>
+			<form onSubmit={this.onFormSubmit} className="medium-10 large-6 small-centered">
 				<div>
 					<label>Top Word
 						<input type='text' ref='top' id='top' placeholder='Stranger' />

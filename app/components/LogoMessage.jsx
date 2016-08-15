@@ -3,8 +3,9 @@ var React = require('react');
 var LogoMessage = ({topFirst, topMiddle, topLast, bottom}) => {
 	return (
 		<div id="logoArea">
+			<div id="topLine"></div>
 			<div id="topWord">
-				<h2 className="text-center">
+				<h2 className="text-center" id="topWordLength">
 					<span className="bigLetter" id="topFirst">
 						{topFirst}
 					</span>

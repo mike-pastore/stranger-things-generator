@@ -1,6 +1,5 @@
 $margin-space: 10rem;
 
-
 body {
 	background-color: black;
 }
@@ -40,5 +39,14 @@ label {
 
 #bottomWord {
 	position: relative;
-	bottom: 4.5rem;
+	bottom: 5rem;
+}
+
+svg {
+	position: relative;
+	top: 0.8rem;
+}
+
+svg > rect {
+	stroke: red;
 }
