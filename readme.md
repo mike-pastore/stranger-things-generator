@@ -1,6 +1,6 @@
-Stranger Things Generator
+#Stranger Things Generator
 
-#Tech used:
+##Tech used:
 
 - SCSS
 - React
@@ -8,5 +8,5 @@ Stranger Things Generator
 - Node.js
 - Heroku
 
-#Challenges faced:
+##Challenges faced:
 - how to dynamically read the middle of the top word, to determine if the bottom word will be too long (visually)
