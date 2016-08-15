@@ -4,6 +4,9 @@ var LogoForm = React.createClass({
 	onFormSubmit: function (e) {
 		e.preventDefault();
 
+		// put cursor back on top input (for rapid user entry)
+		$('#top').focus();
+
 		// get info from form fields
 		var top = this.refs.top.value;
 		var bottom = this.refs.bottom.value;
@@ -30,7 +33,7 @@ var LogoForm = React.createClass({
 			<form onSubmit={this.onFormSubmit}>
 				<div>
 					<label>Top Word
-						<input type='text' ref='top' placeholder='Stranger' />
+						<input type='text' ref='top' id='top' placeholder='Stranger' />
 					</label>
 					<label>Bottom Word
 						<input type='text' ref='bottom' placeholder='Things' />

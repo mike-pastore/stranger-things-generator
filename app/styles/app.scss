@@ -10,15 +10,23 @@ body {
 	margin-bottom: $margin-space;
 }
 
-#logoArea > h2 {
+h2 {
 	color: black;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .bigLetter {
-	
+/*	width: 14px;
+	height: 28px;*/
+	font-size: 6rem;
 }
 
 .smallLetter {
-	
+/*	width: 67px;
+	height: 23px;*/
+	font-size: 4rem;
+}
+
+#topMiddle {
+	vertical-align: top;
 }

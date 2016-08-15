@@ -1,1 +1,1 @@
-Boilerplate React App
+Stranger Things Generator
