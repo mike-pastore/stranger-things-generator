@@ -15,7 +15,8 @@ var LogoForm = React.createClass({
 		top = top.trim().toUpperCase();
 		bottom = bottom.trim().toUpperCase();
 
-		if (top.length > 0 && bottom.length > 0) {
+		// NOTE: top should be > 3 since the first and last letters are made bigger. You need stuff in the middle
+		if (top.length > 3 && bottom.length > 0) {
 			this.refs.top.value = '';
 			this.refs.bottom.value = '';
 
@@ -40,7 +41,7 @@ var LogoForm = React.createClass({
 					</label>
 				</div>
 				<div>
-					<button className="hollow button expanded">Get Weird</button>
+					<button className="hollow button expanded secondary">Do The Thing</button>
 				</div>
 			</form>
 		);

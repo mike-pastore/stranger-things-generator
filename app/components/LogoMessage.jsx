@@ -5,19 +5,19 @@ var LogoMessage = ({topFirst, topMiddle, topLast, bottom}) => {
 		<div id="logoArea">
 			<div id="topWord">
 				<h2 className="text-center">
-					<span className="bigLetter">
+					<span className="bigLetter" id="topFirst">
 						{topFirst}
 					</span>
 					<span className="smallLetter" id="topMiddle">
 						{topMiddle}
 					</span>
-					<span className="bigLetter">
+					<span className="bigLetter" id="topLast">
 						{topLast}
 					</span>
 				</h2>
 			</div>
-			<div id="bottomWord" className="smallLetter">
-				<h2 className="text-center smallLetter">{bottom}</h2>
+			<div id="bottomWord">
+				<h2 className="text-center smallLetter"><span id="bottomWordLength">{bottom}</span></h2>
 			</div>
 			
 		</div>
