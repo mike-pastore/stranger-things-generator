@@ -4,6 +4,7 @@ module.exports = {
 	entry: [
 		'script!jquery/dist/jquery.min.js',
 		'script!foundation-sites/dist/foundation.min.js',
+		'script!./app/js/textfill/source/jquery.textfill.min.js',
 		'./app/app.jsx'
 	],
 	externals: {

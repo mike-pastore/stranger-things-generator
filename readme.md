@@ -3,7 +3,8 @@
 ##Tech used:
 
 - SCSS
-- React
+- React.js
+- Webpack
 - Foundation
 - Node.js
 - Heroku

@@ -27,19 +27,30 @@ var Logo = React.createClass({
 		if (bottomWidth > topMiddleWidth) {
 			alert('Uh-oh! the bottom word is kinda long... But here\'s what it looks like anyways.');
 		}
-
+		
 		// get X and Y of topFirst letter
 		var topWordPos = $('#topFirst').position();
-		// adjust width because of Comic Sans goofiness
+		// adjust width of topLine because of Comic Sans goofiness
 		var adjWidth = (topWordPos.left + topWidth);
 
-		var rectHeight = 10;
+		var rectHeight = 7;
+		
+		// resize bottomWord div, and resize text to fill that div (THIS SHOULD GO IN LOGOMESSAGE.jsx ultimately?)
+		var bottomWordPos = $('#topMiddle').offset();
+		$('#bottomWord').width(topMiddleWidth);
+		var topMiddleHeight = $('#topMiddle').height();
+		$('#bottomWord').offset({top:bottomWordPos.top + (topMiddleHeight - 25), left:bottomWordPos.left});
 
+		// AH finally found the best library @ http://jquery-textfill.github.io/
+		$('#bottomWord h2').textfill();
+
+	
 		function makeLines () {					
 			// make top line
+			// PUT INTO NICE FOUNDATION DIV SO IT SCALES WITH PAGE RE-SIZE (AND STAYS IN LINE WITH TOP WORD)
 			$('#topLine').html(`
 				<svg width="${adjWidth}" height="${rectHeight}">
-  					<rect x="${topWordPos.left}" y="0" width="${topWidth - 20}" height="${rectHeight}" style="fill:black;stroke-width:3;" />
+	  				<rect x="${topWordPos.left}" y="0" width="${topWidth - 20}" height="${rectHeight}" style="fill:black;stroke-width:3;" />
 				</svg>
 			`);
 
