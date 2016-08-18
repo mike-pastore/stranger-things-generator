@@ -26,23 +26,29 @@ var Logo = React.createClass({
 
 		if (bottomWidth > topMiddleWidth) {
 			alert('Uh-oh! the bottom word is kinda long... But here\'s what it looks like anyways.');
+			
+			// $('#bottomWord h2').textfill();
+			var bottomWordNewPos = $('#bottomWord').offset();
+			$('#bottomWord').offset({top: bottomWordNewPos.top + 17, left: bottomWordNewPos.left});
+		} else {
+			// get X and Y of topFirst letter
+			var topWordPos = $('#topFirst').position();
+			// adjust width of topLine because of Comic Sans goofiness
+			var adjWidth = (topWordPos.left + topWidth);
+
+			var rectHeight = 7;
+			
+			// resize bottomWord div, and resize text to fill that div (THIS SHOULD GO IN LOGOMESSAGE.jsx ultimately?)
+			var bottomWordPos = $('#topMiddle').offset();
+			$('#bottomWord').width(topMiddleWidth);
+			var topMiddleHeight = $('#topMiddle').height();
+			$('#bottomWord').offset({top:bottomWordPos.top + (topMiddleHeight - 25), left:bottomWordPos.left});
 		}
 		
-		// get X and Y of topFirst letter
-		var topWordPos = $('#topFirst').position();
-		// adjust width of topLine because of Comic Sans goofiness
-		var adjWidth = (topWordPos.left + topWidth);
-
-		var rectHeight = 7;
 		
-		// resize bottomWord div, and resize text to fill that div (THIS SHOULD GO IN LOGOMESSAGE.jsx ultimately?)
-		var bottomWordPos = $('#topMiddle').offset();
-		$('#bottomWord').width(topMiddleWidth);
-		var topMiddleHeight = $('#topMiddle').height();
-		$('#bottomWord').offset({top:bottomWordPos.top + (topMiddleHeight - 25), left:bottomWordPos.left});
 
 		// AH finally found the best library @ http://jquery-textfill.github.io/
-		$('#bottomWord h2').textfill();
+		
 
 	
 		function makeLines () {					

@@ -28,7 +28,8 @@ module.exports = {
 			About: 'app/components/About.jsx',
 			Logo: 'app/components/Logo.jsx',
 			LogoForm: 'app/components/LogoForm.jsx',
-			LogoMessage: 'app/components/LogoMessage.jsx'
+			LogoMessage: 'app/components/LogoMessage.jsx',
+			ReactFitText: '/Users/mpastore/Desktop/stranger-things/node_modules/react-fittext/lib/ReactFitText.js'
 		},
 		extensions: ['','.js','.jsx']
 	},

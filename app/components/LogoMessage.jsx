@@ -1,6 +1,10 @@
 var React = require('react');
+var ReactFitText = require('ReactFitText')
 
 var LogoMessage = ({topFirst, topMiddle, topLast, bottom}) => {
+	// componentWillUpdate: function () {
+
+	// },
 	return (
 		<div id="logoArea">
 			<div id="topLine"></div>
@@ -26,3 +30,7 @@ var LogoMessage = ({topFirst, topMiddle, topLast, bottom}) => {
 }
 
 module.exports = LogoMessage;
+
+				// <ReactFitText>
+				// 	<h2 className="text-center smallLetter"><span id="bottomWordLength">{bottom}</span></h2>
+				// </ReactFitText>
